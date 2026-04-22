@@ -29,6 +29,76 @@
             color: #ccc;
             font-size: 32px;
         }
+
+        .certification-list {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .certification-item {
+            display: flex;
+            justify-content: space-between;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .project-header {
+                margin-top: 110px;
+                text-align: center;
+            }
+
+            .project-header h1 {
+                font-size: 36px;
+            }
+
+            .project-header span {
+                font-size: 24px;
+            }
+
+            .certification-list {
+                grid-template-columns: repeat(1, minmax(300px, 1fr));
+                gap: 20px;
+            }
+
+            .certification-item {
+                flex-direction: column;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .project-header {
+                margin-top: 110px;
+                text-align: center;
+            }
+
+            .certification-item {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .project-header {
+                margin-top: 110px;
+                text-align: center;
+            }
+
+            .project-header h1 {
+                font-size: 36px;
+            }
+
+            .project-header span {
+                font-size: 24px;
+            }
+
+            .certification-list {
+                grid-template-columns: repeat(1, minmax(300px, 1fr));
+                gap: 20px;
+            }
+        }
     </style>
 </head>
 

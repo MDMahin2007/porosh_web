@@ -105,6 +105,77 @@
             cursor: pointer;
             margin-left: 10px;
         }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar .menu {
+                flex-direction: row;
+                gap: 15px;
+            }
+
+            .our-projects {
+                text-align: center;
+                margin-top: 150px;
+            }
+
+            .our-projects h1 {
+                font-size: 36px;
+            }
+
+            .our-projects span {
+                font-size: 28px;
+                color: #666;
+            }
+
+            .project-item1 {
+                flex-direction: column;
+            }
+
+            .project-item1 img {
+                width: 100%;
+                height: auto;
+            }
+
+            .project-details {
+                padding: 15px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .project-list {
+                grid-template-columns: repeat(1, minmax(300px, 1fr));
+            }
+
+            .project-item1 {
+                flex-direction: column;
+            }
+
+            .project-item1 img {
+                width: 100%;
+                height: auto;
+            }
+
+            .project-details {
+                padding: 15px;
+            }
+        }
+        @media (max-width: 1024px) {
+            .project-details h3 {
+                font-size: 18px;
+            }
+            .pagination {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .page-arrows {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 
