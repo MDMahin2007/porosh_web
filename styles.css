@@ -38,17 +38,59 @@ header {
   width: 100%;
   background: white;
   z-index: 1000;
-  padding: 20px 0;
+  /* padding: 20px 0; */
   border-bottom: 1px solid #f0f0f0;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
+  position: relative;
   align-items: center;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 20px 60px;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px 55px;
+    z-index: 999;
+  }
+
+  .menu.active {
+    display: flex !important;
+  }
+
+  .menu li {
+    margin: 15px 0;
+  }
+  .logo-img {
+    padding: 20px;
+  }
+
 }
 
 .logo {
@@ -57,34 +99,23 @@ header {
   align-items: center;
   text-decoration: none;
   cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-.logo:hover {
-  opacity: 0.8;
 }
 
 .logo-img {
-  height: 50px;
+  height: 15vh;
   width: auto;
+  border-radius: 50px;
   object-fit: contain;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.logo-text {
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  color: var(--text-color);
-}
-
-.logo-subtitle {
-  font-size: 0.65rem;
-  letter-spacing: 1.5px;
-  color: var(--light-text);
-  margin-top: 2px;
+.logo-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
 }
 
 .menu {
+  display: none;
   display: flex;
   list-style: none;
   gap: 40px;
@@ -810,14 +841,8 @@ footer {
 
   .navbar {
     padding: 0 20px;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 20px;
-  }
-
-  .menu {
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 
   .hero {
@@ -956,11 +981,6 @@ footer {
 }
 
 /* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 60px;
-}
 
 .navbar ul {
   display: flex;
@@ -1078,7 +1098,6 @@ copyright {
   }
 
   .navbar {
-    flex-direction: column;
     gap: 20px;
   }
 }

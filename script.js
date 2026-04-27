@@ -13,6 +13,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+const btn = document.getElementById("menu-toggle");
+const menu = document.getElementById("nav-menu");
+
+btn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+
+    const icon = btn.querySelector("i");
+
+    if(menu.classList.contains("active")){
+        icon.className = "bi bi-x-lg";
+    } else {
+        icon.className = "bi bi-list";
+    }
+});
+
 // Project navigation
 const projectNav = {
     current: 0,

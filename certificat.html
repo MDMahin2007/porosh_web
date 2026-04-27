@@ -7,6 +7,7 @@
     <title>Certifications</title>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <style>
         main {
@@ -108,7 +109,11 @@
             <a href="./index.html#home" class="logo">
                 <img src="./img/logo.png" alt="PA Digital Project Logo" class="logo-img">
             </a>
-            <ul class="menu">
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+            <ul class="menu" id="nav-menu">
                 <li><a href="./index.html#home">MENU</a></li>
                 <li><a href="./index.html#about">ABOUT US</a></li>
                 <li><a href="./gallery.html">GALLERY</a></li>
@@ -175,7 +180,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
